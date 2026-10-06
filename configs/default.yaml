@@ -1,0 +1,20 @@
+audio:
+  target_sample_rate: 48000
+  expected_duration_seconds: 1.0
+  rms_target_dbfs: -20.0
+  resample_filter: kaiser_best
+  max_gain_db: 300.0
+
+mel:
+  n_fft: 400
+  win_length: 400
+  hop_length: 160
+  n_mels: 80
+  f_min: 0.0
+  f_max: null
+  power: 2.0
+  center: true
+  pad_mode: reflect
+  normalized: false
+  norm: null
+  mel_scale: htk
