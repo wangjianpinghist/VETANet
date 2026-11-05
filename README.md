@@ -75,7 +75,3 @@ No source audio, sample identifiers, split manifests, or checkpoints are include
 ## License
 
 This supporting code is released under the MIT License. See [`LICENSE`](LICENSE) for details.
-
-## Attribution
-
-The broader research workspace builds in part on AudioClassification-Pytorch by yeyupiaoling. This package contains standalone supporting utilities and does not include its training or model modules. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
