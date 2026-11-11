@@ -1,8 +1,6 @@
 # VETANet Supporting Code
 
-This repository provides supporting code associated with the VETANet study, including the one-second acoustic feature frontend, performance-evaluation utilities, configuration files, and validation tests. The complete model-training implementation and selected model components are not part of this release.
-
-
+This repository provides supporting code associated with the VETANet study, including the one-second acoustic feature frontend, performance-evaluation utilities, configuration files, and validation tests.
 ## Environment
 
 Use Python 3.9 and install matching PyTorch and TorchAudio builds. The tested environment used PyTorch/TorchAudio 2.5.1 with CUDA 12.1; CPU builds with the same versions are also suitable for these utilities. Install the remaining dependencies with:
