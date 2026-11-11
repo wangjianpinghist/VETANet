@@ -2,23 +2,6 @@
 
 This repository provides supporting code associated with the VETANet study, including the one-second acoustic feature frontend, performance-evaluation utilities, configuration files, and validation tests. The complete model-training implementation and selected model components are not part of this release.
 
-## Included
-
-- Standardization and one-second acoustic feature extraction for an already localized WAV clip.
-- Accuracy, macro/weighted precision, recall and F1, per-class metrics, and confusion-matrix calculation from saved labels and predictions.
-- A parameter file and synthetic unit tests.
-
-## Not included
-
-- Event detection, energy-anchor selection, candidate-interval cropping, or any other event-localization logic.
-- The VETANet architecture and its IMTF, GATFI, and CCDC implementations.
-- Training code, data splits, source recordings, trained checkpoints, or historical experiments.
-
-The public preprocessing helper requires an already localized one-second clip. It downmixes multichannel input by channel averaging, resamples to 48 kHz with `resampy`'s `kaiser_best` filter when needed, checks that the duration is exactly one second after resampling, and applies RMS normalization to -20 dBFS. It does not crop or pad audio.
-
-The one-second acoustic feature frontend uses a 48 kHz sample rate, a 400-point FFT, a 400-sample Hann window, a 160-sample hop, 80 HTK-scaled Mel bands, and a power Mel spectrogram. It subtracts the per-clip temporal mean. For a one-second input, the returned array has shape `[1, 80, 301]` (`batch, Mel bands, time frames`).
-
-TorchAudio 2.5.1 may warn that some Mel filters are all zero with this configuration; these settings are retained to match the frontend used in the paper's experiments.
 
 ## Environment
 
